@@ -3,61 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <title>Organizei</title>
-
+    <link rel="stylesheet" href="/src/styles/index.css">
+    <title>Organize&Compre</title>
 </head>
 <body>
-    <nav id="navbar">
-        <i class="fa-solid fa-cart-arrow-down" id="nav_logo"></i>
-        <h1 id="nav_title">Minha Lista</h1>
-        <i class="fa-solid fa-trash" id="nav_trash"></i>
-    </nav>
-    <div id="input_container">
-        <input type="text" id="item_input" placeholder="Nome do item">
-        <input type="number" inputmode="decimal" step="0.01" id="valor_input" placeholder="R$ 0,00">
-        <i class="ri-equalizer-line" id="quantidade"></i>
-        <button onclick="adicionarItem()" id="add_button">+</button>
-    </div>
-    <section id="total_itens">
-    <div id="Info_Pendente">
-        <a class="total_label">PENDENTE</a>
-        <a class="total_value" id="pendente">R$ 0,00</a>
-        <a class="total_label">0 itens</a>
-    </div>
-    <div id="Info_Carrinho">
-        <a class="total_label">NO CARRINHO</a>
-        <a class="total_value" id="carrinho">R$ 0,00</a>
-        <a class="total_label">1 itens</a>
-    </div>
-    <div id="Info_Total">
-        <a class="total_label">TOTAL</a>
-        <a class="total_value" id="total">R$ 0,00</a>
-        <a class="total_label">1 itens</a>
-    </div>
-    </section>
-    <div id="quantidade_btns">
-        <button class="btn">Todos (1)</button>
-        <button class="btn">Pendentes (0)</button>
-        <button class="btn">Comprados (1)</button>
-    </div>
-    <p id="mensagemSucesso">Item adicionado com sucesso.</p>
-    <div id="carrinho_container">
-        <i class="fa-solid fa-cart-arrow-down" id="cart"></i>
-        <h2 class="lista_vazia">Lista vazia</h2>
-        <h3 class="adicione">Adicione um item à sua lista</h3>
-        <!--<i class="fa-solid fa-trash" id="itemExcluir"></i>-->
-    </div>
-    <label class="custom-checkbox">
-        <input type="checkbox"/>
-        <span class="checkmark"></span>
-    </label>
-    <ul id="carrinhoLista" disabled>
-            <!-- Os itens do carrinho serão adicionados aqui dinamicamente -->
-    </ul>
+    <div id="app">
+      <!-- Splash Screen Container -->
+    
+      <div id="splash-screen" class="splash-container">
+        
+        <div class="content-wrapper">
+          <!-- Logo Section -->
+            <div id="forma" class="forma-card-hidden">
+                <div id="forma-icon" class="forma-simples">
+                    <img src="/src/assets/icons/forma-icon.svg" alt="Forma Simples"/>
+                </div>
+            </div>
 
-    <script src="script.js"></script>
+          <div class="logo-area">
+            <div id="logo-v1" class="logo-simple-hidden">
+              <img src="/src/assets/icons/carrinho de compras branco.svg" alt="Logo"/>
+            </div>
+            
+            <div id="logo-v2" class="logo-card-hidden">
+              <div class="card-v2">
+                <img src="/src/assets/icons/logo carrinho 2.svg" alt="Logo-2"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Section -->
+          <div id="text-section" class="text-area-hidden">
+            <h1 class="main-title">Organize & Compre</h1>
+            <div class="divider"></div>
+            
+            <div class="welcome-msg">
+              <h2 class="welcome-title">Bem-vindo</h2>
+              <p class="welcome-subtitle">AO APP DE LISTA DE COMPRAS MAIS PRÁTICO DO MUNDO!</p>
+            </div>
+
+            <button id="start-btn" class="btn-primary">
+              Começar
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+        <div id="marca-dagua" class="bg-marca">ORG</div>
+      </div>
+    </div>
+
+  <script src="/src/script/main.js"></script>
 </body>
 </html>

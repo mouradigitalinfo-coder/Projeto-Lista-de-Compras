@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Organizei</title>
+
+</head>
+<body>
+    <nav id="navbar">
+        <i class="fa-solid fa-cart-arrow-down" id="nav_logo"></i>
+        <h1 id="nav_title">Meu Carrinho de Compras</h1>
+        <i class="fa-solid fa-trash" id="nav_trash"></i>
+    </nav>
+    <div id="input_geral">
+        <div id="input_container">
+            <input type="text" id="item_input" placeholder="Nome do item">
+            <input type="number" inputmode="decimal" min="0" step="0.01" id="valor_input" placeholder="R$ 0,00">
+            <i class="ri-equalizer-line" id="quantidade_itens"></i>
+            <button onclick="adicionarItem()" id="add_button">+</button>
+        </div>
+        <ul id="quanti_Numeros">
+            <!--quantidade de itens-->
+        </ul>
+    </div>
+    <section id="total_itens">
+    <div id="Info_Pendente">
+        <a class="total_label">PENDENTE</a>
+        <span class="total_value" inputmode="decimal" step="0.01" id="pendente">R$ 0,00</span>
+        <span class="total_label" id="qtn-pendente">0 itens</span>
+    </div>
+    <div id="Info_Carrinho">
+        <a class="total_label">NO CARRINHO</a>
+        <span class="total_value" id="carrinho">R$ 0,00</span>
+        <span class="total_label" id="qtn-carrinho">0 itens</span>
+    </div>
+    <div id="Info_Total">
+        <a class="total_label">TOTAL</a>
+        <span class="total_value" id="total">R$ 0,00</span>
+        <span class="total_label" id="qtn-total">0 itens</span>
+    </div>
+    </section>
+    <div id="quantidade_btns">
+        <button class="btn">Todos (0)</button>
+        <a class="btn" href="pre-lista.html">Pré-lista</a>
+        <a class="btn">Histórico</a>
+    </div>
+    <p id="mensagemSucesso">Item adicionado com sucesso.</p>
+    <div id="carrinho_container">
+        <i class="fa-solid fa-cart-arrow-down" id="cart"></i>
+        <h2 class="lista_vazia">Lista vazia</h2>
+        <h3 class="adicione">Adicione um item à sua lista</h3>
+    </div>
+    <ul id="carrinhoLista">
+            <!-- Os itens do carrinho serão adicionados aqui dinamicamente -->
+    </ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+ 
+:root {
+    --bg: #ebebeb;
+    --card: #ffffff;
+    --muted: #b4b4b4;
+    --primary: #ff6b35;
+    --text: #1a1919;
+    --success: #2ec4b6;
+}
+
+body.dark {
+    --bg: #121218;
+    --card: #1f1f23;
+    --muted: #8a8a8a;
+    --primary: #ff6b35;
+    --text: #f3f3f3;
+    --success: #32d3b0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 16px 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    max-width: 900px;
+    margin: 5px auto;
+    padding: 8px 12px;
+    gap: 12px;
+}
+
+h1 {
+    font-family: 'nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text);
+}
+
+#nav_logo {
+    font-size: 18px;
+    color: var(--primary);
+}
+#save_trash {
+    display: flex;
+    gap: 20px;
+}
+
+#save {
+    font-size: 18px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#save:hover {
+    color: var(--text);
+}
+#nav_trash {
+    font-size: 17px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#nav_trash:active {
+    color: var(--text);
+}
+
+#nav_trash:hover {
+    color: var(--text);
+}
+
+#input_geral {
+    background-color: var(--card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 1px 0px 1.0px rgba(92, 92, 92, 0.10);
+    border-radius: 15px;
+    margin: 10px 20px;
+    padding: 10px 12px 12px 12px;
+    width: calc(100% - 40px);
+    max-width: 900px;
+}
+
+#input_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 8px;
+    gap: 8px;
+}
+
+#item_input {
+    background-color: rgba(0,0,0,0.03);
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: #f8f8f85d solid 0.5px;
+    font-family: 'nunito', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text);
+}
+
+#add_button:disabled {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background-color: rgba(0,0,0,0.04);
+    color: var(--muted);
+}
+
+#add_button {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    background-color: var(--primary);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.08s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#add_button:hover {
+    background-color: #df896a;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: calc(100% - 40px);
+    max-width: 900px;
+    margin: 12px auto;
+}
+
+ul li {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--card);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    align-items: center;
+    color: var(--text);
+    font-family: 'nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    animation: pop 220ms ease both;
+}
+
+ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+span {
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+#mensagemSucesso {
+    font-family: nunito, sans-serif;
+    font-size: 14px;
+    color: var(--success);
+    text-align: center;
+    display: none;
+}
+
+#carrinho_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    padding: 12px;
+    gap: 6px;
+}
+
+#cart {
+    font-size: 44px;
+    color: var(--muted);
+}
+
+/* animações e utilitários */
+@keyframes pop {
+    from { transform: scale(.98); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; transform: translateX(12px); height: 0; margin: 0; padding: 0; }
+}
+
+.fade-out {
+    animation: fadeOut 200ms forwards;
+}
+
+#add_button:active { transform: scale(.96); }
+
+/* ultramobile */
+@media (max-width: 360px) {
+    #navbar { padding: 8px 10px; gap: 8px; }
+    h1 { font-size: 18px; }
+    #item_input { font-size: 13px; padding: 8px; }
+    #add_button { padding: 8px 10px; font-size: 16px; }
+    #cart { font-size: 36px; }
+    ul li { font-size: 13px; padding: 8px; }
+}
+
+/* Media queries para telas maiores */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 22px;
+    }
+    #nav_logo {
+        font-size: 20px;
+    }
+    #input_geral {
+        padding: 14px 18px;
+    }
+    #item_input {
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+    #add_button {
+        font-size: 18px;
+        padding: 12px 16px;
+    }
+    ul li {
+        font-size: 15px;
+        padding: 10px 14px;
+    }
+    #cart {
+        font-size: 56px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #navbar {
+        max-width: 1100px;
+    }
+    #input_geral, ul {
+        max-width: 1100px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
+.lista_vazia {
+    font-family: nunito, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1d1d1d;
+}
+
+.adicione {
+    font-family: nunito, sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    color: #707070;
+}
+
+.itemExcluir {
+    display: flex;
+    background-color: #cccccc;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    height: 18px;
+    font-family: 'Inter', sans-serif;
+    padding: 1px 5px 3px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.itemExcluir:hover {
+    background-color: #ff6b35;
+}

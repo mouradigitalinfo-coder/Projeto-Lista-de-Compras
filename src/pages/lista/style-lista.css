@@ -1,0 +1,442 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    background-color: #ebebeb;
+    justify-content: center;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px;
+    padding: 10px;
+    gap: 40px;
+}
+
+h1 {
+    font-family: 'nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a1919;
+}
+
+#nav_logo {
+    font-size: 18px;
+    color: #ff6b35;
+}
+
+#nav_trash {
+    font-size: 17px;
+    color: #b4b4b4;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#nav_trash:hover {
+    color: #2b2a2a;
+}
+
+#nav_trash:active {
+    color: #2b2a2a;
+}
+
+#nav_trash:hover {
+    color: #dddddd;
+}
+
+#input_geral {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 1px 0px 1.0px rgba(92, 92, 92, 0.10);
+    border-radius: 15px;
+    margin: 10px 20px 10px 20px;
+    padding: 8px 8px 8px 8px;
+    gap: 10px;
+}
+
+#input_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+    padding: 7px 5px 7px 5px;
+    gap: 10px;
+}
+
+#item_input {
+    background-color: #eeeeee;
+    width: 50%;
+    padding: 8px;
+    border-radius: 10px;
+    border: #f8f8f85d solid 0.5px;
+    font-family: 'nunito', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+#valor_input {
+    background-color: #eeeeee;
+    width: 28%;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: #f8f8f85d solid 0.5px;
+    font-family: 'nunito', sans-serif;
+    font-size: 13px;
+}
+
+#add_button:disabled {
+    width: 12%;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background-color: #eeeeee;
+    color: #8a8989;
+}
+
+#add_button {
+    width: 12%;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background-color: #ff6b35;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+add_button:hover {
+    background-color: #df896a;
+}
+
+#quanti_Numeros {
+    display: flex;
+    padding: 5px;
+    margin: 5px 15px 5px 15px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.menos-qntd, .mais-qntd {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 4px 10px 3px 10px;
+    color: #5a5a5a;
+    font-family: 'nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menos-qntd:hover, .mais-qntd:hover {
+    background-color: #eeeeee;
+}
+
+#quantidade-itens {
+    padding: 4px 5px 3px 5px;
+    font-family: 'nunito', sans-serif;
+    color: #464646;
+    font-size: 13px;
+    font-weight: 700;
+    width: 10px;
+    margin: 2px;
+}
+
+#qtn-itens {
+    color: #5a5a5a;
+    font-family: 'nunito', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.qnt-itens{
+    margin-left: 30px;
+}
+
+#quanti_Numeros {
+    display: flex;
+    padding: 5px;
+    margin: 5px 15px 5px 15px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: none;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 3px 20px 3px 20px;
+    
+}
+
+ul li {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 4px 10px 3px 10px;
+    margin: 3px 20px 3px 20px;
+    align-items: center;
+    justify-content: flex-start;
+    color: #5a5a5a;
+    font-family: 'nunito', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+span {
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.item_valor {
+    margin-right: 20px;
+}
+
+.qnt-itens {
+    margin-left: auto;
+}
+
+#carrinhoLista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#total_itens {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 1px 0px 1.0px rgba(92, 92, 92, 0.15);
+    border-radius: 20px;
+    margin: 10px 20px 10px 20px;
+    margin-bottom: 3px;
+    padding: 14px;
+    gap: 8px;
+    font-family: 'nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#Info_Pendente {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#Info_Carrinho {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#Info_Total {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.total_label {
+    font-size: 10px;
+    color: #b4b4b4;
+}
+
+.total_value {
+    font-family: nunito, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+#pendente {
+    color: #1a1919
+}
+
+#carrinho {
+    color: #2ec4b6
+}
+
+#total {
+    color: #ff6b35
+}
+
+#quantidade_btns {
+    display: flex;
+    padding: 8px;
+    margin: 5px 15px 5px 15px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.btn {
+    background-color: #ffffff;
+    color: #6b6b6b;
+    font-family: nunito, sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    width: 50%;
+    padding: 5px;
+    box-shadow: 0px 1px 0px 1.0px rgba(92, 92, 92, 0.15);
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff6b35;
+    color: #ffffff;
+}
+
+#mensagemSucesso {
+    font-family: nunito, sans-serif;
+    font-size: 14px;
+    color: #2ec4b6;
+    text-align: center;
+    display: none;
+}
+
+#carrinho_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+    gap: 5px;
+}
+
+#cart {
+    font-size: 48px;
+    color: #b4b4b4;
+}
+
+.lista_vazia {
+    font-family: nunito, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1d1d1d;
+}
+
+.adicione {
+    font-family: nunito, sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    color: #707070;
+}
+
+.itemExcluir {
+    display: flex;
+    background-color: #cccccc;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    height: 18px;
+    font-family: 'Inter', sans-serif;
+    padding: 1px 5px 3px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.itemExcluir:hover {
+    background-color: #ff6b35;
+}
+
+#quantidade_itens {
+    font-family: nunito, sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #7c7c7c;
+}
+
+#quantidade_itens:hover {
+    color: #a3a3a3;
+}
+
+#quantidade_itens:active {
+    color: #2b2b2b;
+}
+
+/* Esconde o checkbox padrão, mas mantém ele acessível */
+input[type="checkbox"] {
+  appearance: none; /* Remove o estilo padrão do navegador */
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 50%; /* Faz o círculo */
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* Quando o checkbox estiver marcado (Checked) */
+input[type="checkbox"]:checked {
+  background-color: #2ec4b6; /* A cor que você desejar */
+  border-color: #2ec4b6;
+}
+
+/* Adicionando um "check" (v) dentro do círculo quando marcado */
+input[type="checkbox"]:checked::after {
+  content: '✔';
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Efeito de hover (passar o mouse) */
+input[type="checkbox"]:hover {
+  border-color: #cbcccc solid 1px;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
