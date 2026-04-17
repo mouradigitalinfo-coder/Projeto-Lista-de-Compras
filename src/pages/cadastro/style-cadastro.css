@@ -1,0 +1,182 @@
+@import url('../../styles/base/global.css');
+
+/* 1. ESTILOS ESPECÍFICOS PARA A PÁGINA DE LOGIN */
+body {
+  display: flex;
+  background-color: var(--cor-bg-clara);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-conta {
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 10px 30PX;
+}
+
+.title {
+  font-family: var(--fonte-principal-titulo);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--cor-text2-preto);
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  color: var(--cor-subtitulo-cinza);
+  font-family: var(--fonte-texto);
+  font-weight: 300;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.nome-sobrenome {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.label {
+  font-family: var(--fonte-texto);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cor-subtitulo-cinza);
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+::placeholder {
+  font-family: var(--fonte-texto);
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--cor-input-cinza);
+}
+
+.btn-cadastro {
+  background-color: var(--cor-principal-laranja);
+  color: var(--cor-text1-branco);
+  width: 100%;
+  padding: 15px 15px;
+  border: none;
+  font-family: var(--fonte-principal-titulo);
+  font-weight: 500;
+  border-radius: 9999px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #f897298e;
+}
+
+.signup-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.social-conect {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.conect {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.conect-text {
+  font-family: var(--fonte-texto);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 11px;
+  color: var(--cor-subtitulo-cinza);
+}
+
+.line {
+  width: 20%;
+  height: 1px;
+  background-color: var(--cor-input-cinza);
+}
+
+.conta {
+  display: flex;
+  background-color: #ffffff;
+  padding: 12px 15px;
+  width: 140px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-direction: row;
+  gap: 10px;
+  font-family: var(--fonte-texto);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.signup-link {
+  font-family: var(--fonte-texto);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cor-text2-preto);
+  text-decoration: none;
+}
+
+.logo {
+  width: 20px;
+}
+
+.cadastre-section {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.text-cadastre {
+  font-family: var(--fonte-texto);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--cor-subtitulo-cinza);
+}
+
+.cadastre {
+  font-family: var(--fonte-texto);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--cor-principal-laranja);
+  text-decoration: none;
+}
